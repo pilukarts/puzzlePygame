@@ -1,0 +1,88 @@
+game/
+    __init__.py
+    game.py
+    entities/
+        __init__.py
+        candy.py
+        enemy.py
+        coin.py
+        player.py
+    ui/
+        __init__.py
+        ui.py
+    utils/
+        __init__.py
+        utils.py
+    main.py
+
+# entities/candy.py
+
+import pygame
+
+class Candy(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        super().__init__()
+        self.image = pygame.Surface((30, 30))
+        self.image.fill((255, 0, 0))
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+    def update(self):
+        # Update the candy's position and state
+        pass
+
+    def draw(self, screen):
+        # Draw the candy on the screen
+        screen.blit(self.image, self.rect)
+
+# game/game.py
+
+import pygame
+from entities import Candy
+
+class Game:
+    def __init__(self):
+        self.screen = pygame.display.set_mode((800, 600))
+        self.clock = pygame.time.Clock()
+        self.candies = [Candy(100, 100), Candy(200, 200)]
+
+    def update(self):
+        # Update the game state
+        for candy in self.candies:
+            candy.update()
+
+    def draw(self):
+        # Draw the game state on the screen
+        self.screen.fill((255, 255, 255))
+        for candy in self.candies:
+            candy.draw(self.screen)
+
+    def run(self):
+        running = True
+        while running:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
+
+            self.update()
+            self.draw()
+            pygame.display.flip()
+            self.clock.tick(60)
+
+        pygame.quit()
+
+# main.py
+
+from game import Game
+
+def main():
+    game = Game()
+    game.run()
+
+if __name__ == "__main__":
+    main()
+
+
+
+

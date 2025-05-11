@@ -1,0 +1,276 @@
+o address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+npm warn audit No fix available for git@*
+npm warn audit No fix available for curl@*
+npm warn audit Updating update to 0.4.2, which is a SemVer major change.
+npm warn deprecated set-value@0.4.3: Critical bug fixed in v3.0.1, please upgrade to the latest version.
+npm warn deprecated set-value@0.3.3: Critical bug fixed in v3.0.1, please upgrade to the latest version.
+npm warn deprecated set-value@0.2.0: Critical bug fixed in v3.0.1, please upgrade to the latest version.
+npm warn deprecated set-value@0.4.3: Critical bug fixed in v3.0.1, please upgrade to the latest version.
+npm warn deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+npm warn deprecated rimraf@2.6.3: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@5.0.15: Glob versions prior to v9 are no longer supported
+npm warn deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+npm warn deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm warn deprecated circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
+npm warn deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm warn deprecated gulp-util@3.0.8: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5
+npm warn deprecated eslint@1.10.3: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 298 packages, removed 222 packages, changed 52 packages, and audited 796 packages in 57s
+
+24 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+braces  <=3.0.2
+Severity: high
+Regular Expression Denial of Service in braces - https://github.com/advisories/GHSA-g95f-p29q-9xw4
+Regular Expression Denial of Service (ReDoS) in braces - https://github.com/advisories/GHSA-cwfw-4gq5-mrqx
+Uncontrolled resource consumption in braces - https://github.com/advisories/GHSA-grv7-fg5c-xmjg
+fix available via `npm audit fix --force`
+Will install update@0.7.4, which is a breaking change
+node_modules/braces
+node_modules/readdirp/node_modules/braces
+  micromatch  <=4.0.7
+  Depends on vulnerable versions of braces
+  Depends on vulnerable versions of braces
+  node_modules/micromatch
+  node_modules/readdirp/node_modules/micromatch
+    anymatch  1.2.0 - 2.0.0
+    Depends on vulnerable versions of micromatch
+    node_modules/anymatch
+      chokidar  1.3.0 - 2.1.8
+      Depends on vulnerable versions of anymatch
+      node_modules/chokidar
+        composer  0.2.0 - 0.11.2
+        Depends on vulnerable versions of bach
+        Depends on vulnerable versions of chokidar
+        node_modules/composer
+          base-tasks  <=0.2.0
+          Depends on vulnerable versions of composer
+          node_modules/base-tasks
+            assemble-core  0.3.0 - 0.11.2
+            Depends on vulnerable versions of base-tasks
+            Depends on vulnerable versions of templates
+            node_modules/assemble-core
+    question-match  *
+    Depends on vulnerable versions of micromatch
+    node_modules/question-match
+      base-cli  0.4.7 - 0.4.26
+      Depends on vulnerable versions of base-questions
+      Depends on vulnerable versions of map-schema
+      Depends on vulnerable versions of question-match
+      Depends on vulnerable versions of set-value
+      node_modules/base-cli
+    readdirp  2.2.0 - 2.2.1
+    Depends on vulnerable versions of micromatch
+    node_modules/readdirp
+    update  >=0.3.0-beta
+    Depends on vulnerable versions of base
+    Depends on vulnerable versions of base-options
+    Depends on vulnerable versions of base-store
+    Depends on vulnerable versions of engine-base
+    Depends on vulnerable versions of expand-args
+    Depends on vulnerable versions of expand-object
+    Depends on vulnerable versions of gulp-eslint
+    Depends on vulnerable versions of micromatch
+    Depends on vulnerable versions of question-cache
+    Depends on vulnerable versions of set-value
+    Depends on vulnerable versions of union-value
+    node_modules/update
+
+git  *
+Severity: high
+Code injection in npm git - https://github.com/advisories/GHSA-9gqr-xp86-f87h
+Depends on vulnerable versions of mime
+No fix available
+node_modules/git
+
+js-yaml  <=3.13.0
+Severity: high
+Denial of Service in js-yaml - https://github.com/advisories/GHSA-2pr6-76vf-7546
+Code Injection in js-yaml - https://github.com/advisories/GHSA-8j8c-7jfh-h6hx
+fix available via `npm audit fix`
+node_modules/eslint/node_modules/js-yaml
+  eslint  0.4.0 - 0.11.0 || 0.21.0 - 4.0.0-rc.0
+  Depends on vulnerable versions of inquirer
+  Depends on vulnerable versions of js-yaml
+  Depends on vulnerable versions of lodash.merge
+  Depends on vulnerable versions of shelljs
+  node_modules/eslint
+
+lodash  <=4.17.20
+Severity: critical
+Regular Expression Denial of Service (ReDoS) in lodash - https://github.com/advisories/GHSA-x5rq-j2xg-h7qm
+Prototype Pollution in lodash - https://github.com/advisories/GHSA-4xc9-xhrj-v574
+Regular Expression Denial of Service (ReDoS) in lodash - https://github.com/advisories/GHSA-29mw-wpgm-hmr9
+Prototype Pollution in lodash - https://github.com/advisories/GHSA-p6mc-m468-83gw
+Command Injection in lodash - https://github.com/advisories/GHSA-35jh-r3h4-6jhm
+Prototype Pollution in lodash - https://github.com/advisories/GHSA-fvqr-27wr-82fm
+Prototype Pollution in lodash - https://github.com/advisories/GHSA-jf85-cpcp-j695
+fix available via `npm audit fix`
+node_modules/lodash
+  bach  <=0.4.2
+  Depends on vulnerable versions of lodash
+  node_modules/bach
+  inquirer  <=0.11.4
+  Depends on vulnerable versions of lodash
+  node_modules/inquirer
+
+lodash.merge  <=4.6.1
+Severity: high
+Prototype Pollution in lodash.merge - https://github.com/advisories/GHSA-2m96-9w4j-wgv7
+Prototype Pollution in lodash.merge - https://github.com/advisories/GHSA-h726-x36v-rx45
+fix available via `npm audit fix`
+node_modules/lodash.merge
+
+lodash.template  *
+Severity: high
+Command Injection in lodash - https://github.com/advisories/GHSA-35jh-r3h4-6jhm
+fix available via `npm audit fix`
+node_modules/lodash.template
+  gulp-util  >=1.1.0
+  Depends on vulnerable versions of lodash.template
+  node_modules/gulp-util
+    gulp-eslint  <=4.0.0
+    Depends on vulnerable versions of gulp-util
+    node_modules/gulp-eslint
+
+
+mime  <1.4.1
+Severity: high
+mime Regular Expression Denial of Service when MIME lookup performed on untrusted user input - https://github.com/advisories/GHSA-wrvr-8mpx-r7pp
+No fix available
+node_modules/mime
+
+minimatch  <=3.0.4
+Severity: high
+Regular Expression Denial of Service in minimatch - https://github.com/advisories/GHSA-hxm2-r34f-qmc5
+minimatch ReDoS vulnerability - https://github.com/advisories/GHSA-f8q6-p94x-37v3
+fix available via `npm audit fix`
+node_modules/glob-stream/node_modules/minimatch
+  glob-stream  0.2.0 - 5.2.0
+  Depends on vulnerable versions of minimatch
+  node_modules/glob-stream
+
+request  *
+Severity: moderate
+Server-Side Request Forgery in Request - https://github.com/advisories/GHSA-p8p7-x288-28g6
+Depends on vulnerable versions of tough-cookie
+No fix available
+node_modules/request
+  curl  *
+  Depends on vulnerable versions of request
+  node_modules/curl
+
+set-value  <=2.0.0
+Severity: critical
+Prototype Pollution in set-value - https://github.com/advisories/GHSA-4jqc-8m5r-9rpr
+Prototype Pollution in set-value - https://github.com/advisories/GHSA-4g88-fppr-53pp
+fix available via `npm audit fix --force`
+Will install update@0.7.4, which is a breaking change
+node_modules/cache-base/node_modules/set-value
+node_modules/engine/node_modules/set-value
+node_modules/merge-value/node_modules/set-value
+node_modules/option-cache/node_modules/set-value
+node_modules/set-value
+node_modules/union-value/node_modules/set-value
+  base  0.6.3 - 0.6.7
+  Depends on vulnerable versions of set-value
+  node_modules/base
+    data-store  0.8.0 - 0.16.1
+    Depends on vulnerable versions of base
+    Depends on vulnerable versions of cache-base
+    Depends on vulnerable versions of union-value
+    node_modules/data-store
+    node_modules/question-store/node_modules/data-store
+      base-store  *
+      Depends on vulnerable versions of data-store
+      node_modules/base-store
+      question-store  *
+      Depends on vulnerable versions of data-store
+      Depends on vulnerable versions of option-cache
+      Depends on vulnerable versions of set-value
+      node_modules/question-store
+        base-questions  <=0.5.6
+        Depends on vulnerable versions of question-store
+        node_modules/base-questions
+    templates  >=0.1.6
+    Depends on vulnerable versions of base
+    Depends on vulnerable versions of base-data
+    Depends on vulnerable versions of base-options
+    Depends on vulnerable versions of engine-base
+    node_modules/templates
+  base-data  <=0.6.0
+  Depends on vulnerable versions of merge-value
+  Depends on vulnerable versions of set-value
+  Depends on vulnerable versions of union-value
+  node_modules/base-data
+  cache-base  0.7.0 - 1.0.0
+  Depends on vulnerable versions of set-value
+  Depends on vulnerable versions of union-value
+  node_modules/cache-base
+  engine  0.1.6 - 0.1.12
+  Depends on vulnerable versions of set-value
+  node_modules/engine
+    engine-base  <=0.1.3
+    Depends on vulnerable versions of engine
+    node_modules/engine-base
+  expand-args  *
+  Depends on vulnerable versions of expand-object
+  Depends on vulnerable versions of set-value
+  node_modules/expand-args
+  expand-object  *
+  Depends on vulnerable versions of set-value
+  node_modules/expand-object
+  map-schema  <=0.2.4
+  Depends on vulnerable versions of set-value
+  Depends on vulnerable versions of union-value
+  node_modules/map-schema
+  merge-value  <=0.1.1
+  Depends on vulnerable versions of set-value
+  node_modules/merge-value
+  option-cache  >=1.3.0
+  Depends on vulnerable versions of set-value
+  node_modules/option-cache
+    base-options  >=0.4.0
+    Depends on vulnerable versions of option-cache
+    node_modules/base-options
+  question-cache  >=0.2.0
+  Depends on vulnerable versions of set-value
+  node_modules/question-cache
+  union-value  <=1.0.0 || 2.0.0
+  Depends on vulnerable versions of set-value
+  node_modules/union-value
+
+shelljs  <=0.8.4
+Severity: high
+Improper Privilege Management in shelljs - https://github.com/advisories/GHSA-64g7-mvw6-v9qj
+Improper Privilege Management in shelljs - https://github.com/advisories/GHSA-4rq4-32rv-6wp6
+fix available via `npm audit fix`
+node_modules/shelljs
+
+tough-cookie  <4.1.3
+Severity: moderate
+tough-cookie Prototype Pollution vulnerability - https://github.com/advisories/GHSA-72xf-g2v4-qvf3
+No fix available
+node_modules/tough-cookie
+
+47 vulnerabilities (11 moderate, 13 high, 23 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
